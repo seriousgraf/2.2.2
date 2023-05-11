@@ -17,11 +17,14 @@ import java.util.Optional;
 @Controller
 public class CarsController {
 
-    @Autowired
     private CarService carService;
+    @Autowired
+    public void setCarService(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping("/cars")
-    public String getCars(@RequestParam(required = false, defaultValue = "3") int count, Model model) {
+    public String getCars(@RequestParam(required = false, defaultValue = "5") int count, Model model) {
         List<Car> cars = carService.getCars(count);
         model.addAttribute("cars", cars);
         return "cars";

@@ -11,15 +11,12 @@ import java.util.stream.Collectors;
 @Repository
 public class CarDaoImp implements CarDao{
 
-    private static final List<Car> carList = new ArrayList<>();
-
-    static {
+    private static final List<Car> carList = new ArrayList<>(); {
         carList.add(new Car("Toyota", "Crown", 2011));
         carList.add(new Car("Toyota", "Land Cruiser", 2011));
         carList.add(new Car("Toyota", "Mark2", 1998));
         carList.add(new Car("Honda", "Civic", 2011));
         carList.add(new Car("Nissan", "Leaf", 2011));
-
     }
     @Override
     public List<Car> getCars(int count) {
