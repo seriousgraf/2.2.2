@@ -3,15 +3,15 @@ package web.models;
 import java.util.Objects;
 
 public class Car {
+    private String carBrand;
+    private String model;
+    private int year;
+
     public Car(String make, String model, int year) {
         this.carBrand = make;
         this.model = model;
         this.year = year;
     }
-
-    private String carBrand;
-    private String model;
-    private int year;
 
     public String getCarBrand() {
         return carBrand;
@@ -40,11 +40,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "carBrand='" + carBrand + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                '}';
+        return "Car{" + "carBrand='" + carBrand + '\'' + ", model='" + model + '\'' + ", year=" + year + '}';
     }
 
     @Override
